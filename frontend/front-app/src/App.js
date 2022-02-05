@@ -17,13 +17,27 @@ Yes or no thing
  */
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [user, setUser] = useState({})
 
+  const doIt = (e) => {
+    /*Edit user from login page *login page reqs user data and passes it back to app so app can pass it on to others */
+    setUser(e)
+  }
   return (
     <Router> 
+      <Navbar loggedIn = {loggedIn}/>
       <Switch>
-        <Route path="/">
-          {loggedIn ? <Home /> : <NotLoggedIn />}
+        <Route exact path="/">
+          {loggedIn ? <Home user = {user}/> : <NotLoggedIn set = {doIt}/>}
+        </Route>
+
+        <Route path='/home'>
+          <Home />
+        </Route>
+
+        <Route path='/selection'>
+          {user ? <Profile user = {user}/> : null}
         </Route>
       </Switch>
     </Router>

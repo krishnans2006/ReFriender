@@ -1,11 +1,18 @@
 import React, {useState, useEffect} from 'react'
-import Navbar from './Navbar'
+import './Profile.css'
 
 function Profile({}){
     const [name, setName] = useState('Michael Jackson')
     const [location, setLocation] = useState('Heheh')
+    const [potentials, setPotentials] = useState([])
+    const [activePerson, setActivePerson] = useState({})
+    const [i, setI] = useState(0)
 
-    //Maybe use redux instead of usestate? *Transfers state between components easily and quickly w/store
+    useEffect(() => {
+        //fetch data from backend
+        setPotentials()
+        setActivePerson(potentials[i])
+    }, [])
 
     const handleClick = (e) => {
         e.preventDefault()
@@ -13,6 +20,13 @@ function Profile({}){
         //If know send data and use that data to expiedite search? (probably too nuanced for our time frame)
         //If used to know send a match req to the home page of the used to know person
         //If dont know move on to the next in array of people?
+    }
+
+    const nextPerson = () => {
+        setI((prevState) => {
+            return prevState + 1
+        })
+        setActivePerson(potentials[i])
     }
 
     return(
@@ -27,10 +41,11 @@ function Profile({}){
             </div>
 
             <div className='buttonContainer'>
-                <button className='button' onClick = {handleClick}>Know</button>
-                <button className='button' onClick = {handleClick}>Used To Know</button>
-                <button className='button' onClick = {handleClick}>Don't Know</button>
+                <button className='button knowBtn' onClick = {handleClick}>Know</button>
+                <button className='button usedToBtn' onClick = {handleClick}>Used To Know</button>
+                <button className='button dontBtn' onClick = {handleClick}>Don't Know</button>
             </div>
+
         </div>
     )
 }

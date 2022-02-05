@@ -1,0 +1,45 @@
+.button {
+    /*background-color: #0076ff;*/
+    border-radius: 7px;
+    border: 2px solid black;
+    height: 6vh;
+    /*height: 7vh;*/
+    padding-left: 10px;
+    width: 100%;
+    /*margin-left: 75px;*/
+    color: white;
+    align-self: center;
+    margin-top: 2px;
+    margin-top: 2em;
+    font-size: 14px;
+}
+
+.knowBtn {
+    background-color: white;
+    color: black;
+}
+
+.usedToBtn {
+    background-color: greenyellow;
+    color: black;
+}
+
+.dontBtn {
+    background-color: red;
+}
+
+.buttonContainer {
+    margin-top: 4vh;
+}
+
+.description {
+    height: 10em;
+}
+
+.description{
+    align-self: center;
+    background-color: #3E4377;
+    width: 20em;
+    margin-top: 1em;
+    text-align: center;
+}

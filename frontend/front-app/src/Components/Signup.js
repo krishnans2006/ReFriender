@@ -19,6 +19,7 @@ function Signup({}){
 
     return(
         <form className='signUp'>
+            <h1 className="header-one full-width text-center">Sign Up</h1>
             <div className='horizontal'>
                 <input 
                 type = 'text'
