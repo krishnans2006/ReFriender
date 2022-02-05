@@ -7,8 +7,101 @@
     background-color: rgb(117, 117, 255);
     display: flex;
     flex-direction: row;
+    height: 10vh;
 }
 .margin-left{
     margin-left: 1vw;
     color: white;
+    flex-grow: 2;
+}
+.hello{
+    color: white;
+    align-self: center;
+    margin-right: 1vw;
+}
+.image{
+    height: auto;
+    width: auto;
+    max-width: 20em;
+    align-self: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.description{
+    align-self: center;
+    background-color: rgb(188, 255, 233);
+    width: 20em;
+    margin-top: 1em;
+    text-align: center;
+}
+.buttonContainer{
+    width: 40em;
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+}
+.button{
+    margin-top: 1em;
+    width: 10em;
+    height: 3em;
+}
+.button:hover{
+    cursor: pointer;
+}
+.signUp{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+}
+.standardInput{
+    width: 22vw;
+    height: 7vh;
+    margin-top: 2em;
+    font-size: 1em;
+    padding-left: 1vw;
+}
+.inputLabel{
+    font-size: 1.5em;
+}
+.bigButton{
+    width: 100%;
+    align-self: center;
+    margin-top: 2em;
+    height: 7vh;
+}
+.bigButton:hover{
+    cursor: pointer;
+}
+.loginCard{
+    height: 60vh;
+    width: 30vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.small{
+    width: 23.5vw;
+}
+.length{
+    margin-top: 1em;
+    width: 23.5vw;
+}
+.smaller{
+    width: 9.8vw;
+}
+.black{
+    color: black;
+}
+
+.horizontal{
+    flex-direction: row;
+    justify-content: space-evenly;
 }
