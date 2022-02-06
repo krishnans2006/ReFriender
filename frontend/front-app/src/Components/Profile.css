@@ -55,3 +55,8 @@
     margin-top: 2em;
     text-align: center;
 }
+
+.description * {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

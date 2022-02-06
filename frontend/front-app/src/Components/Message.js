@@ -5,7 +5,7 @@ function Message({iAmTheSender, message}){
     
     return(
         <div className={iAmTheSender ? 'you' : 'notYou'}>
-            <h3>{message.message}</h3>
+            <h3>{message}</h3>
         </div>
     )
 }

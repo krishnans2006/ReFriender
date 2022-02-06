@@ -6,11 +6,6 @@
     color: white;
     flex-grow: 2;
 }
-.hello{
-    color: white;
-    align-self: center;
-    margin-right: 1vw;
-}
 .image{
     height: auto;
     width: auto;
@@ -77,6 +72,7 @@
 }
 .bigButton:hover{
     cursor: pointer;
+    background-color: #2c8fff;
 }
 .loginCard{
     height: 60vh;

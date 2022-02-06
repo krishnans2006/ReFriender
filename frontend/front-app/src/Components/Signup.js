@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function Signup({}){
+function Signup({doIt}){
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
@@ -8,8 +8,8 @@ function Signup({}){
     const [highSchool, setHighschool] = useState('')
     const [middleSchool, setMiddleSchool] = useState('')
     const [password, setPassword] = useState('')
-    const [city, setCity] = useState('')
-    const [country, setCountry] = useState('')
+    const [zipCode, setZipCode] = useState('')
+    const [yearOfBirth, setYearOfBirth] = useState('')
 
     const handleThing =  async (e, setter) => {
         setter(e.target.value)
@@ -20,15 +20,20 @@ function Signup({}){
             firstName,
             lastName,
             email,
-            facebook,
             highSchool,
             middleSchool,
             password,
-            city,
-            country
+            zipCode, 
+            yearOfBirth
         }
-
-        
+        const request = await fetch('http://localhost:5000/register', {
+            mode: 'cors',
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(signUp)
+        })
+        const result = await request.json()
+        console.log(result)
     }
 
     return(
@@ -56,27 +61,15 @@ function Signup({}){
                 />
             </div>
 
-            <div className='horizontal'>
-                <input 
-                type = 'text'
-                name = 'city'
-                value = {city}
-                onChange = {(e) => {handleThing(e, setCity)}}
-                className='standardInput smaller'
-                required
-                placeholder='City'
-                />
-
-                <input 
-                type = 'text'
-                name = 'country'
-                value = {country}
-                onChange = {(e) => {handleThing(e, setCountry)}}
-                className='standardInput smaller margin-left black'
-                required
-                placeholder='Country'
-                />
-            </div>
+            <input 
+            type = 'text'
+            name = 'zipcode'
+            value = {zipCode}
+            onChange = {(e) => {handleThing(e, setZipCode)}}
+            className='standardInput'
+            required
+            placeholder='Zip Code'
+            />
 
             <input 
             type = 'text'
@@ -86,16 +79,6 @@ function Signup({}){
             className='standardInput'
             required
             placeholder='Email'
-            />
-
-            <input 
-            type = 'text'
-            name = 'phone'
-            value = {facebook}
-            onChange = {(e) => {handleThing(e, setFacebook)}}
-            className='standardInput'
-            required
-            placeholder='Facebook ID'
             />
 
             <input
@@ -118,6 +101,16 @@ function Signup({}){
             placeholder='Middle School Name'
             />
 
+            <input
+            type = 'text'
+            name = 'location'
+            value = {yearOfBirth}
+            onChange = {(e) => {handleThing(e, setYearOfBirth)}}
+            className='standardInput'
+            required
+            placeholder='Year Of Birth *23/6/2006'
+            />
+
             <input 
             type = 'password'
             name = 'firstName'
@@ -129,6 +122,8 @@ function Signup({}){
             />
 
             <button onClick={handleSubmit} className='bigButton'>Sign Up</button>
+
+            <button onClick={doIt} className='bigButton small'>Log In</button>
         </form>
     )
 }

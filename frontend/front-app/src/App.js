@@ -29,7 +29,7 @@ function App() {
       <Navbar loggedIn = {loggedIn}/>
       <Switch>
         <Route exact path="/">
-          {loggedIn ? <Home user = {user}/> : <NotLoggedIn set = {doIt}/>}
+          {loggedIn ? <Home user = {user}/> : <NotLoggedIn doIt = {doIt}/>}
         </Route>
 
         <Route path='/home'>

@@ -6,35 +6,69 @@
 .chatName{
     align-self: center;
 }
+.chatdivthing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    height: 100%;
+    max-height: 62vh;
+    width: 100%;
+    overflow-y: scroll;
+}
 .lengthy{
     width: 40vw;
 }
-.sendS{
-    position: static;
-    bottom: 0;
-    display:flex;
-    flex-direction: row;
-}
-.sendP{
-    position: absolute;
+.send {
+    position: fixed;
     bottom: 0;
     display:flex;
     flex-direction: row;
 }
 .sendAText{
-    width: 70vw;
-    height: 10vh;
+    width: 64vw;
+    height: 5vh;
+    margin-bottom: 1vh;
     font-size: 1.5em;
+    font-size: 15px;
 }
 .sendert{
-    width: 3vw;
+    width: 3.5vw;
+    height: 6vh; 
+    /*margin-top: 4px;*/
+    margin-bottom: 8px;
+    margin-left: 5px;
+    border-radius: 7px;
+    border: 2px solid black;
+    /*height: 7vh;*/
+    /*margin-left: 75px;*/
+    color: white;
+    align-self: center;
+    font-size: 14px;
+    background-color: #0076ff;
 }
 .sendert:hover{
     cursor: pointer;
+    background-color: #1884ff;
 }
 .Goback{
     height: 5vh;
+    border-radius: 7px;
+    border: 2px solid black;
+    height: 6vh;
+    /*height: 7vh;*/
+    /*margin-left: 75px;*/
+    color: white;
+    /*
+    margin-top: 2em;
+    margin-left: 2vh;
+    */
+    left: 2vh;
+    font-size: 14px;
+    background-color: #0076ff;
+    position: fixed;
 }
 .Goback:hover{
     cursor: pointer;
+    background-color: #1884ff;
 }

@@ -1,47 +1,65 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './chat.css'
 import Message from './Message'
 
 function Chat({chat, goBack, user}){
-    const [newMessage, setNewMessage] = useState('')
-    user = {
-        name: 'Me'
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
     }
+
+    const [newMessage, setNewMessage] = useState('')
+    const [messages, setMessages] = useState([])
+    const [time, setTime] = useState(0)
 
     const handleChange = (e) => {
         setNewMessage(e.target.value)
     }
     const submit = async (e) => {
         e.preventDefault()
-        const result = await fetch('http://localhost:5000/send', {
+        console.log(user)
+        const request = await fetch(`http://localhost:5000/send`, {
             mode: 'cors',
-            method: 'POST',
-            headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                message: newMessage,
-                sender: user.id,
-                receiver: chat.id
-            })
+                sender: getCookie('email'),
+                receiver: user.email,
+                message: newMessage
+            }),
+            headers: {"Content-Type": "application/json"},
+            method: 'POST'
         })
-        const realResult = await submit.json()
+        const data = await request.json()
+        console.log(data)
         
         setNewMessage('')
     }
-
+    chat.result.reverse()
     return(
         <div className='Chat'>
-            <button onClick={goBack} className='Goback'>Go back</button>
-            <h1 className='chatName'>{chat.name}</h1>  
+            <h1 className='chatName'><button onClick={goBack} className='Goback'>&emsp;Back&emsp;</button>&emsp;{chat.name}</h1>
             <hr className='lengthy'></hr>
-            {chat.messages.map((key) => {
-                if(key.sender === user.name){
-                    return <Message iAmTheSender={true} message={key}/>
-                } else {
-                    return <Message iAmTheSender={false} message={key}/>
+            <div className='chatdivthing'>
+                {chat.result.map((key) => {
+                    if(key.Sender == getCookie('email')){
+                        return <Message iAmTheSender={true} message={key.Message}/>
+                    } else {
+                        return <Message iAmTheSender={false} message={key.Message}/>
+                    }
+                })
                 }
-            })
-            }
-            <div className={chat.messages.length > 8 ? 'sendS' : 'sendP'}>
+            </div>
+            <div className='send'>
                 <input 
                 type = 'text'
                 placeholder='Send a message'

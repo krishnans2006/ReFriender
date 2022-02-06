@@ -8,7 +8,7 @@
     background-color: rgb(223, 223, 223);
     min-height: 90vh;
     height: fit-content;
-    width: 16vw;
+    width: 23vw;
 }
 .ProfileContainer{
     flex-grow: 4;
@@ -20,6 +20,13 @@
 }
 .chatbox{
     background-color: rgb(245,245,245);
+    border-radius: 7px;
+    border: 2px solid black;
+    /*
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,6 +34,8 @@
     font-size: 14px;
     height: 5em;
     padding-top: 10px;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 .chatbox:hover{
     cursor: pointer;
@@ -55,11 +64,46 @@
     flex-direction: column;
 }
 .changeProfilePic{
+    border-radius: 7px;
+    border: 2px solid black;
+    height: 6vh;
+    /*height: 7vh;*/
+    padding-left: 10px;
+    width: 100%;
+    /*margin-left: 75px;*/
+    color: white;
+    align-self: center;
     margin-top: 2em;
-    width: 24em;
-    height: 4em;
+    font-size: 14px;
+    background-color: #ff0000;
+}
+.changeProfilePic:hover{
+    background-color: rgb(255, 58, 58);
+    cursor: pointer;
 }
 .chatTime{
     flex-grow: 4;
     width: 40vw;
+}
+
+.smallButton {
+    /*background-color: #0076ff;*/
+    border-radius: 7px;
+    border: 2px solid black;
+    height: 6vh;
+    /*height: 7vh;*/
+    padding-left: 10px;
+    width: 47.5%;
+    /*margin-left: 75px;*/
+    color: white;
+    align-self: center;
+    margin-top: 2px;
+    margin-top: 2em;
+    font-size: 14px;
+    background-color: #0076ff;
+}
+
+.smallButton:hover{
+    background-color: #1c86ff;
+    cursor: pointer;
 }

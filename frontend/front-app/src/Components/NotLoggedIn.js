@@ -7,14 +7,14 @@ function NotLoggedIn({doIt}){
     const [signUp, setSignUp] = useState(false)
     const signed = (e) => {
         setSignUp(true)
-        doIt()
+        doIt(true)
     }
     return(
         <div className= {signUp ? 'App' : null}>
             {
                 signUp ? <Signup /> :
                 <div>
-                    <h1 className='center'>Welcome To Refriendler</h1>
+                    <h1 className='center'>Welcome To ReFriender</h1>
                     <Login doIt = {signed}/>
                 </div>
             }

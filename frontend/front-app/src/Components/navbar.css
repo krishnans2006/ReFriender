@@ -1,6 +1,6 @@
 .look{
     color: white;
-    flex-grow: 1;
+    flex-grow: 2;
 }
 .look:hover{
     cursor: pointer;
@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     height: 10vh;
+    position: relative;
 }
 .Refriendler{
     flex-grow: 1;
@@ -19,4 +20,15 @@
 .Refriendler:hover{
     cursor: pointer;
     color: rgb(214, 214, 214);
+}
+.hello{
+    color: white;
+    align-self: center;
+    padding-right: 1vw;
+    background-color: rgb(255, 0, 179);
+    padding-left: 1vw;
+}
+
+.hello:hover {
+    cursor: pointer; 
 }
