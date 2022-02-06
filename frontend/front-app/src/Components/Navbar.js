@@ -15,7 +15,7 @@ function Navbar({loggedIn}){
 
     const handleClick = (e) => {
         e.preventDefault()
-        if(e.target.className === 'margin-left Refriendler'){
+        if(e.target.className === 'margin-left ReFriender'){
             history.push('/')
         } else{
             history.push('/selection')
@@ -25,7 +25,7 @@ function Navbar({loggedIn}){
         <div>
             <link rel='stylesheet' href='"https://fonts.google.com/specimen/Economica?query=economica"'/>
             <nav className = 'navbar'>
-                <h1 className = 'margin-left Refriendler' onClick={handleClick}>ReFriendler</h1>
+                <h1 className = 'margin-left ReFriender' onClick={handleClick}>ReFriendler</h1>
 
                 <h1 className='look' onClick={handleClick}>{loggedIn ? 'Look For Old Relationships!' : null}</h1>
 

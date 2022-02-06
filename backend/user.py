@@ -4,6 +4,8 @@ from typing import Optional
 @dataclass
 class User:
     uid: str
+    email: str
+    password: str
     first_name: str
     last_name: str
     country: str

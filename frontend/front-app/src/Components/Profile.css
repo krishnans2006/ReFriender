@@ -19,13 +19,25 @@
     color: black;
 }
 
+.knowBtn:hover {
+    background-color: whitesmoke;
+}
+
 .usedToBtn {
     background-color: greenyellow;
     color: black;
 }
 
+.usedToBtn:hover {
+    background-color: rgb(195, 255, 106);
+}
+
 .dontBtn {
     background-color: red;
+}
+
+.dontBtn:hover {
+    background-color: rgb(255, 119, 119);
 }
 
 .buttonContainer {
@@ -40,6 +52,6 @@
     align-self: center;
     background-color: #3E4377;
     width: 20em;
-    margin-top: 1em;
+    margin-top: 2em;
     text-align: center;
 }

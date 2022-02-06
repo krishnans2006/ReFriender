@@ -11,9 +11,20 @@ function Chat({chat, goBack, user}){
     const handleChange = (e) => {
         setNewMessage(e.target.value)
     }
-    const submit = (e) => {
+    const submit = async (e) => {
         e.preventDefault()
-        //Call backend w/ new message
+        const result = await fetch('http://localhost:5000/send', {
+            mode: 'cors',
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                message: newMessage,
+                sender: user.id,
+                receiver: chat.id
+            })
+        })
+        const realResult = await submit.json()
+        
         setNewMessage('')
     }
 

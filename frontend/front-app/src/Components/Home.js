@@ -44,6 +44,7 @@ function Home({user}){
             },
             {
                 name: 'Monsieur Chow',
+                id: '123',
                 messages: [
                     {
                         sender: 'Monsieur Chow',

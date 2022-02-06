@@ -9,7 +9,18 @@ function Login({doIt}){
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
-        //Send
+        const loginInfo = {
+            email,
+            password
+        }
+        const request = await fetch('http://localhost:5000/login', {
+            mode: 'cors',
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(loginInfo)
+        })
+        const result = await request.json()
+        console.log(result)
     }
 
     return(

@@ -6,6 +6,7 @@ function Signup({}){
     const [email, setEmail] = useState('')
     const [facebook, setFacebook] = useState('')
     const [highSchool, setHighschool] = useState('')
+    const [middleSchool, setMiddleSchool] = useState('')
     const [password, setPassword] = useState('')
     const [city, setCity] = useState('')
     const [country, setCountry] = useState('')
@@ -15,6 +16,19 @@ function Signup({}){
     }
     const handleSubmit = async (e) => {
         e.preventDefault()
+        const signUp = {
+            firstName,
+            lastName,
+            email,
+            facebook,
+            highSchool,
+            middleSchool,
+            password,
+            city,
+            country
+        }
+
+        
     }
 
     return(
@@ -92,6 +106,16 @@ function Signup({}){
             className='standardInput'
             required
             placeholder='High School Name'
+            />
+
+            <input
+            type = 'text'
+            name = 'location'
+            value = {middleSchool}
+            onChange = {(e) => {handleThing(e, setMiddleSchool)}}
+            className='standardInput'
+            required
+            placeholder='Middle School Name'
             />
 
             <input 
