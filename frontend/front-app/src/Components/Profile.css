@@ -1,0 +1,57 @@
+.button {
+    /*background-color: #0076ff;*/
+    border-radius: 7px;
+    border: 2px solid black;
+    height: 6vh;
+    /*height: 7vh;*/
+    padding-left: 10px;
+    width: 100%;
+    /*margin-left: 75px;*/
+    color: white;
+    align-self: center;
+    margin-top: 2px;
+    margin-top: 2em;
+    font-size: 14px;
+}
+
+.knowBtn {
+    background-color: white;
+    color: black;
+}
+
+.knowBtn:hover {
+    background-color: whitesmoke;
+}
+
+.usedToBtn {
+    background-color: greenyellow;
+    color: black;
+}
+
+.usedToBtn:hover {
+    background-color: rgb(195, 255, 106);
+}
+
+.dontBtn {
+    background-color: red;
+}
+
+.dontBtn:hover {
+    background-color: rgb(255, 119, 119);
+}
+
+.buttonContainer {
+    margin-top: 4vh;
+}
+
+.description {
+    height: 10em;
+}
+
+.description{
+    align-self: center;
+    background-color: #3E4377;
+    width: 20em;
+    margin-top: 2em;
+    text-align: center;
+}

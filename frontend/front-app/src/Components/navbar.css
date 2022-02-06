@@ -1,0 +1,22 @@
+.look{
+    color: white;
+    flex-grow: 1;
+}
+.look:hover{
+    cursor: pointer;
+    color: rgb(223, 223, 223)
+}
+.navbar{
+    width: 100vw;
+    background-color: rgb(117, 117, 255);
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+.Refriendler{
+    flex-grow: 1;
+}
+.Refriendler:hover{
+    cursor: pointer;
+    color: rgb(214, 214, 214);
+}

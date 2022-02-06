@@ -1,0 +1,40 @@
+.Chat{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.chatName{
+    align-self: center;
+}
+.lengthy{
+    width: 40vw;
+}
+.sendS{
+    position: static;
+    bottom: 0;
+    display:flex;
+    flex-direction: row;
+}
+.sendP{
+    position: absolute;
+    bottom: 0;
+    display:flex;
+    flex-direction: row;
+}
+.sendAText{
+    width: 70vw;
+    height: 10vh;
+    font-size: 1.5em;
+}
+.sendert{
+    width: 3vw;
+}
+.sendert:hover{
+    cursor: pointer;
+}
+.Goback{
+    height: 5vh;
+}
+.Goback:hover{
+    cursor: pointer;
+}
