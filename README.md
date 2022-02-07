@@ -1,5 +1,7 @@
 # ReFriender
 
+https://www.youtube.com/watch?v=XxutOuYRz9M
+
 ## Inspiration
 The theme of restoration is usually connotated with tangible things such as the environment. In this project, though, we wanted to take a creative approach by restoring one of the most meaningful things in our life: our social connections. Everyone has old friends that they lost their touch with, or people they could not really get to know. ReFriender has born as a solution to this. With its advanced algorithm to find the user's old connections using their current ones, ReFriender is an app for everyone that wants to get back in touch with their old friends to see what they are up to. Especially during the pandemic where people may feel lonely, ReFriender is THE app to spark some new (or reborn the old) connections.
 
