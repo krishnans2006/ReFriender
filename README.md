@@ -1,6 +1,6 @@
 # ReFriender
 
-[![wakatime](https://wakatime.com/badge/github/KrishnanS2006/ReFriender.svg)](https://wakatime.com/badge/github/KrishnanS2006/ReFriender)
+[![wakatime](https://wakatime.com/badge/github/krishnans2006/ReFriender.svg)](https://wakatime.com/badge/github/krishnans2006/ReFriender)
 
 https://www.youtube.com/watch?v=XxutOuYRz9M
 
